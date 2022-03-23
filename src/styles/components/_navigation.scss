@@ -1,0 +1,16 @@
+.navigation {
+  padding: 40px 0 0 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  ul {
+    height: 96px;
+    width: 830px;
+    background-color: #97979707;
+    backdrop-filter: blur(15px);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}

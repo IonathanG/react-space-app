@@ -1,0 +1,62 @@
+//----- IMPORTS -----
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap");
+
+//----- COLORS -----
+$darkBlack: #0b0d17;
+$lightPurple: #d0d6f9;
+$lightWhite: #ffffff;
+
+//----- HEADING MIXINS -----
+@mixin headingStyle_1($size) {
+  font-family: Bellefair, sans-serif;
+  font-size: $size;
+  color: $lightPurple;
+  text-transform: uppercase;
+}
+
+@mixin headingStyle_2($size, $spacing) {
+  font-family: Barlow, sans-serif;
+  font-size: $size;
+  letter-spacing: $spacing;
+  color: $lightPurple;
+  text-transform: uppercase;
+}
+
+//----- TEXT -----
+%text-style {
+  font-family: Barlow, sans-serif;
+}
+
+//----- FLEX CENTER -----
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+//----- GENERAL SETTINGS -----
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $darkBlack;
+  color: $lightWhite;
+  min-height: 100vh;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:visited {
+    color: $lightWhite;
+  }
+}
