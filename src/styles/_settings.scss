@@ -9,12 +9,21 @@ $font_Barlow: "Barlow Condensed";
 $darkBlack: #0b0d17;
 $lightPurple: #d0d6f9;
 $lightWhite: #ffffff;
+$faintGray: #979797;
+
+//----- SCREEN SIZES -----
+$tablet: 900px;
+$phone: 700px;
 
 //----- HEADING MIXINS -----
 @mixin menuStyle() {
   font-family: $font_Barlow, sans-serif;
   font-size: 16px;
   letter-spacing: 2.7px;
+
+  @media (max-width: $phone) {
+    font-size: 20px;
+  }
 }
 
 @mixin headingStyle_1($size) {
@@ -30,6 +39,14 @@ $lightWhite: #ffffff;
   letter-spacing: $spacing;
   color: $lightPurple;
   text-transform: uppercase;
+}
+
+@mixin imgBackground($img) {
+  background: url($img) no-repeat center center fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  min-height: 100vh;
 }
 
 //----- PLACEHOLDERS -----
@@ -70,6 +87,8 @@ body {
   background-color: $darkBlack;
   color: $lightWhite;
   min-height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 li {

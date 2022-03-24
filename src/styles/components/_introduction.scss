@@ -2,8 +2,12 @@
   margin-top: 25vh;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-end;
   justify-content: space-around;
+
+  @media (max-width: 640px) {
+  }
 
   header {
     max-width: 450px;
@@ -24,5 +28,12 @@
   .explore {
     @extend %explore-btn;
     cursor: pointer;
+    transition: 0.3s ease-in;
+
+    &:hover {
+      box-shadow: 0 0 0 85px #2426307e;
+      transform: scale(1.02);
+      border: 2px solid $darkBlack;
+    }
   }
 }

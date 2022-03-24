@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Navigation = () => {
+  const [isActive, setActive] = useState("false");
+
+  const handleToggle = () => {
+    setActive(!isActive);
+  };
+
   return (
     <nav className="navigation">
       <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
@@ -13,37 +19,54 @@ const Navigation = () => {
           />
         </g>
       </svg>
-      <ul className="navigation__list">
-        <NavLink to="/" className={(nav) => (nav.isActive ? "nav-active" : "")}>
-          <li className="navigation__list--home">
-            <span>00</span>Home
-          </li>
-        </NavLink>
-        <NavLink
-          to="/destination"
-          className={(nav) => (nav.isActive ? "nav-active" : "")}
-        >
-          <li className="navigation__list--destination">
-            <span>01</span>Destination
-          </li>
-        </NavLink>
-        <NavLink
-          to="/crew"
-          className={(nav) => (nav.isActive ? "nav-active" : "")}
-        >
-          <li className="navigation__list--crew">
-            <span>02</span>Crew
-          </li>
-        </NavLink>
-        <NavLink
-          to="/technology"
-          className={(nav) => (nav.isActive ? "nav-active" : "")}
-        >
-          <li className="navigation__list--technology">
-            <span>03</span>Technology
-          </li>
-        </NavLink>
-      </ul>
+
+      <div
+        className={`navigation__container ${
+          isActive ? "" : "container-active"
+        }`}
+      >
+        <ul className="navigation__container--list">
+          <NavLink
+            to="/"
+            className={(nav) => (nav.isActive ? "nav-active" : "")}
+          >
+            <li>
+              <span>00</span>Home
+            </li>
+          </NavLink>
+          <NavLink
+            to="/destination"
+            className={(nav) => (nav.isActive ? "nav-active" : "")}
+          >
+            <li>
+              <span>01</span>Destination
+            </li>
+          </NavLink>
+          <NavLink
+            to="/crew"
+            className={(nav) => (nav.isActive ? "nav-active" : "")}
+          >
+            <li>
+              <span>02</span>Crew
+            </li>
+          </NavLink>
+          <NavLink
+            to="/technology"
+            className={(nav) => (nav.isActive ? "nav-active" : "")}
+          >
+            <li>
+              <span>03</span>Technology
+            </li>
+          </NavLink>
+        </ul>
+      </div>
+
+      <div
+        className={`hamburger-container ${
+          isActive ? "hamburger-rest" : "hamburger-active"
+        }`}
+        onClick={handleToggle}
+      ></div>
     </nav>
   );
 };
