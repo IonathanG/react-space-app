@@ -13,27 +13,35 @@ const Navigation = () => {
           />
         </g>
       </svg>
-      <ul>
+      <ul className="navigation__list">
         <NavLink to="/" className={(nav) => (nav.isActive ? "nav-active" : "")}>
-          <li>Home</li>
+          <li className="navigation__list--home">
+            <span>00</span>Home
+          </li>
         </NavLink>
         <NavLink
           to="/destination"
           className={(nav) => (nav.isActive ? "nav-active" : "")}
         >
-          <li>Destination</li>
+          <li className="navigation__list--destination">
+            <span>01</span>Destination
+          </li>
         </NavLink>
         <NavLink
           to="/crew"
           className={(nav) => (nav.isActive ? "nav-active" : "")}
         >
-          <li>Crew</li>
+          <li className="navigation__list--crew">
+            <span>02</span>Crew
+          </li>
         </NavLink>
         <NavLink
           to="/technology"
           className={(nav) => (nav.isActive ? "nav-active" : "")}
         >
-          <li>Technology</li>
+          <li className="navigation__list--technology">
+            <span>03</span>Technology
+          </li>
         </NavLink>
       </ul>
     </nav>

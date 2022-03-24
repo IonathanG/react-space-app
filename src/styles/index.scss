@@ -1,6 +1,9 @@
 @import "./settings";
-@import "./components/navigation";
+
 @import "./pages/home";
 @import "./pages/crew";
 @import "./pages/destination";
 @import "./pages/technology";
+
+@import "./components/navigation";
+@import "./components/introduction";

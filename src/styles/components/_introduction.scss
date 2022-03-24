@@ -1,0 +1,28 @@
+.introduction {
+  margin-top: 25vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+
+  header {
+    max-width: 450px;
+
+    .heading_5 {
+      @include headingStyle_2(28px, 4.75px);
+    }
+
+    .heading_1 {
+      @include headingStyle_1(150px);
+    }
+
+    .body_text {
+      @extend %text-style;
+    }
+  }
+
+  .explore {
+    @extend %explore-btn;
+    cursor: pointer;
+  }
+}

@@ -1,5 +1,9 @@
 //----- IMPORTS -----
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap");
+//@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap");
+
+//----- FONTS -----
+$font_Belle: "Bellefair";
+$font_Barlow: "Barlow Condensed";
 
 //----- COLORS -----
 $darkBlack: #0b0d17;
@@ -7,24 +11,45 @@ $lightPurple: #d0d6f9;
 $lightWhite: #ffffff;
 
 //----- HEADING MIXINS -----
+@mixin menuStyle() {
+  font-family: $font_Barlow, sans-serif;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+}
+
 @mixin headingStyle_1($size) {
-  font-family: Bellefair, sans-serif;
+  font-family: $font_Belle, sans-serif;
   font-size: $size;
   color: $lightPurple;
   text-transform: uppercase;
 }
 
 @mixin headingStyle_2($size, $spacing) {
-  font-family: Barlow, sans-serif;
+  font-family: $font_Barlow, sans-serif;
   font-size: $size;
   letter-spacing: $spacing;
   color: $lightPurple;
   text-transform: uppercase;
 }
 
-//----- TEXT -----
+//----- PLACEHOLDERS -----
 %text-style {
-  font-family: Barlow, sans-serif;
+  font-family: $font_Barlow, sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: 1px;
+}
+
+%explore-btn {
+  text-transform: uppercase;
+  font-family: $font_Belle, sans-serif;
+  letter-spacing: 2px;
+  font-size: 32px;
+  width: 280px;
+  height: 280px;
+  background-color: $lightWhite;
+  border-radius: 50%;
+  border: none;
 }
 
 //----- FLEX CENTER -----

@@ -1,11 +1,12 @@
 import React from "react";
+import Introduction from "../components/Introduction";
 import Navigation from "../components/Navigation";
 
 const Home = () => {
   return (
     <div className="home">
       <Navigation />
-      <h1>Home</h1>
+      <Introduction />
     </div>
   );
 };
