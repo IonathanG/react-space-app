@@ -2,26 +2,63 @@
   margin-top: 25vh;
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
   align-items: flex-end;
   justify-content: space-around;
 
-  @media (max-width: 640px) {
+  //background-color: rgba(245, 245, 220, 0.384);
+
+  @media (max-width: $tablet) {
+    margin-top: 5vh;
+    height: 80vh;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
   }
 
   header {
     max-width: 450px;
 
+    @media (max-width: $tablet) {
+      text-align: center;
+    }
+
     .heading_5 {
       @include headingStyle_2(28px, 4.75px);
+
+      @media (max-width: $tablet) {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: $phone) {
+        font-size: 16px;
+      }
     }
 
     .heading_1 {
       @include headingStyle_1(150px);
+
+      @media (max-width: $tablet) {
+        font-size: 120px;
+      }
+
+      @media (max-width: $phone) {
+        font-size: 80px;
+      }
     }
 
     .body_text {
       @extend %text-style;
+
+      @media (max-width: $tablet) {
+        font-size: 16px;
+        max-width: 90%;
+        margin: 0px auto;
+      }
+
+      @media (max-width: $phone) {
+        font-size: 15px;
+      }
     }
   }
 
@@ -34,6 +71,25 @@
       box-shadow: 0 0 0 85px #2426307e;
       transform: scale(1.02);
       border: 2px solid $darkBlack;
+    }
+
+    @media (max-width: $tablet) {
+      height: 220px;
+      width: 220px;
+
+      &:hover {
+        box-shadow: 0 0 0 60px #2426307e;
+      }
+    }
+
+    @media (max-width: $phone) {
+      width: 150px;
+      height: 150px;
+      font-size: 20px;
+
+      &:hover {
+        box-shadow: 0 0 0 50px #2426307e;
+      }
     }
   }
 }

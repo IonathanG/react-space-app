@@ -1,5 +1,11 @@
 .home {
-  @include imgBackground(
-    "../../../public/img/Home/background-home-desktop.jpg"
-  );
+  @include imgBackground("../../assets/img/Home/background-home-desktop.jpg");
+
+  @media (max-width: $tablet) {
+    @include imgBackground("../../assets/img/Home/background-home-tablet.jpg");
+  }
+
+  @media (max-width: $phone) {
+    @include imgBackground("../../assets/img/Home/background-home-mobile.jpg");
+  }
 }

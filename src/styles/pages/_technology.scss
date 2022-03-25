@@ -1,5 +1,17 @@
 .technology {
   @include imgBackground(
-    "../../../public/img/Technology/background-technology-desktop.jpg"
+    "../../assets/img/Technology/background-technology-desktop.jpg"
   );
+
+  @media (max-width: $tablet) {
+    @include imgBackground(
+      "../../assets/img/Technology/background-technology-tablet.jpg"
+    );
+  }
+
+  @media (max-width: $phone) {
+    @include imgBackground(
+      "../../assets/img/Technology/background-technology-mobile.jpg"
+    );
+  }
 }

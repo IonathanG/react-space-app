@@ -1,0 +1,10 @@
+.page-title {
+  @include headingStyle_2(28px, 4.72px);
+  color: $lightWhite;
+
+  span {
+    font-weight: 700;
+    color: $faintGray;
+    opacity: 0.5;
+  }
+}

@@ -1,5 +1,11 @@
 .crew {
-  @include imgBackground(
-    "../../../public/img/Crew/background-crew-desktop.jpg"
-  );
+  @include imgBackground("../../assets/img/Crew/background-crew-desktop.jpg");
+
+  @media (max-width: $tablet) {
+    @include imgBackground("../../assets/img/Crew/background-crew-tablet.jpg");
+  }
+
+  @media (max-width: $phone) {
+    @include imgBackground("../../assets/img/Crew/background-crew-mobile.jpg");
+  }
 }

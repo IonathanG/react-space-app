@@ -1,5 +1,19 @@
 .destination {
   @include imgBackground(
-    "../../../public/img/Destination/background-destination-desktop.jpg"
+    "../../assets/img/Destination/background-destination-desktop.jpg"
   );
+
+  @media (max-width: $tablet) {
+    @include imgBackground(
+      "../../assets/img/Destination/background-destination-tablet.jpg"
+    );
+  }
+
+  @media (max-width: $phone) {
+    @include imgBackground(
+      "../../assets/img/Destination/background-destination-mobile.jpg"
+    );
+  }
+
+  width: 100%;
 }
