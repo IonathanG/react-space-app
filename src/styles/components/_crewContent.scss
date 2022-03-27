@@ -1,0 +1,96 @@
+.crew-content {
+  //background-color: rgba(255, 228, 196, 0.158);
+  width: 80vw;
+  margin: 30px auto 0 auto;
+
+  @media (max-width: 1320px) {
+    width: 90vw;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: $tablet) {
+    width: 70%;
+  }
+
+  @media (max-width: $phone) {
+    width: 85%;
+  }
+
+  &__main {
+    position: relative;
+    //background-color: rgba(0, 255, 255, 0.144);
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    //padding: 0 60px;
+    height: 70vh;
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      padding: 20px 0;
+      height: 100%;
+      gap: 40px;
+    }
+
+    &--detail {
+      //background-color: rgba(0, 255, 255, 0.288);
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      .crew-role {
+        @include headingStyle_1(32px);
+        margin: 20px 0;
+      }
+
+      .crew-name {
+        @include headingStyle_1(56px);
+        color: $lightWhite;
+      }
+
+      .crew-text {
+        @extend %text-style;
+        margin: 30px 0;
+      }
+
+      .dot-menu {
+        position: absolute;
+        bottom: 20px;
+        display: flex;
+        gap: 30px;
+        .dot-item {
+          margin-top: 50px;
+          height: 15px;
+          width: 15px;
+          border-radius: 50%;
+          padding: 5px;
+          background-color: $faintGray;
+          opacity: 0.5;
+          cursor: pointer;
+          transition: 0.2s ease-out;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+        .dot-active {
+          opacity: 1;
+          background-color: $lightWhite;
+        }
+      }
+    }
+
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 60%;
+      width: 45%;
+      //min-width: 300px;
+      max-width: 450px;
+      height: auto;
+      //background-color: rgba(245, 245, 220, 0.212);
+    }
+  }
+}

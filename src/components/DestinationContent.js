@@ -39,8 +39,6 @@ const DestinationContent = () => {
           <div className="destination-title">{destination.name}</div>
           <div className="destination-text">{destination.description}</div>
 
-          <div className="divider"></div>
-
           <div className="destination__data">
             <div className="destination__data--distance">
               <header>AVG. DISTANCE</header>

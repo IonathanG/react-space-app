@@ -1,11 +1,12 @@
 import React from "react";
+import CrewContent from "../components/CrewContent";
 import Navigation from "../components/Navigation";
 
 const Crew = () => {
   return (
     <div className="crew">
       <Navigation />
-      <h1>Crew</h1>
+      <CrewContent />
     </div>
   );
 };
